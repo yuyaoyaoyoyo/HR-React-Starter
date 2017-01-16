@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡练习</title>
+    <style type="text/css">
+        .transition{
+            background-color: #8ec63f;
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 100px;
+            height: 100px;
+            border-radius: .5em;
+            /*-webkit-transition-property: background-color;*/
+            /*-webkit-transition-duration: 1s;*/
+            /*-webkit-transition-timing-function: linear;*/
+            transition-property: background,height,width;
+            transition-duration: 0.1s,1s,1s;
+            transition-timing-function: linear,ease,linear;
+        }
+        .transition:hover{
+            width: 80px;
+            height: 80px;
+            background-color: #f79;
+        }
+        .transition:active{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<div class="transition"></div>
+</body>
+</html>

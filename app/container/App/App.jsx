@@ -3,7 +3,10 @@
  */
 'use strict'
 import React, {PureComponent} from 'react'
-import Header from './header/Header.jsx'
+
+import './app.scss'
+import Mainpage from '../../container/Mainpage/Mainpage.jsx'
+import Earth_logo from '../../component/Earth_logo/Earth_logo.jsx'
 class App extends PureComponent {
     constructor(props) {
         super(props);
@@ -42,8 +45,10 @@ class App extends PureComponent {
     render() {
         console.log('App' + 'rendering');
         return (
-            <div>
-                <Header></Header>
+            <div className="container">
+                {/*<Earth_logo/>*/}
+                <Mainpage/>
+
             </div>
         )
     }

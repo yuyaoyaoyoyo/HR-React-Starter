@@ -52,7 +52,7 @@ module.exports = merge(base, {
                 ]
             },{
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif|mp4|webm)(\?\S*)?$/,
-                loader: 'url-loader?limit=1&name=dist/assets/imgs/[name].[ext]'
+                loader: 'url-loader?limit=100&name=dist/assets/imgs/[name].[ext]'
             }
         ]
     },

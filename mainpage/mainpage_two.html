@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTround</title>
+    <style type="text/css">
+        html,body{
+            height: 100%;
+            position: relative;
+            /*background: linear-gradient(180deg,rgba(64,145,255,.7),#447df7) ;*/
+            padding: 100px;
+            background-image: url('images/背景.png');
+
+        }
+        @keyframes cir_run_one {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(-360deg);
+            }
+        }
+        @keyframes cir_run_two {
+            0% {
+                transform: rotateY(36deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateY(36deg) rotateZ(-360deg);
+            }
+        }
+        @keyframes cir_run_three {
+            0% {
+                transform: rotateY(72deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateY(72deg) rotateZ(-360deg);
+            }
+        }
+        @keyframes cir_run_four {
+            0% {
+                transform: rotateY(108deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateY(108deg) rotateZ(-360deg);
+            }
+        }
+        @keyframes cir_run_five {
+            0% {
+                transform: rotateY(144deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateY(144deg) rotateZ(-360deg);
+            }
+        }
+
+        .circle{
+
+            height: 100%;
+        }
+        .cube{
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(-50deg) rotateY(32deg);
+        }
+        .side{
+            position: absolute;
+            background-image: url('ttround.png');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .pic .round{
+            position: absolute;
+            transform-style: preserve-3d;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+        .pic .rou11{
+            background-image: url("images/供暖.png");
+            top: 90px;
+            left: 12px;
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            z-index: 1;
+            box-shadow: white 0px 0px 100px;
+        }
+        .pic .rou11:hover:after{
+            content: '供暖分系统';
+            line-height: 80px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: black;
+            opacity:.8;
+        }
+        .pic .rou11:hover{
+            box-shadow: 0 0 0 4px rgba(255,255,255,1);
+            color: #fff;
+
+        }
+        .pic .rou12{
+            transform: rotateX(50deg) rotateY(-32deg);
+            top: 550px;
+            left: 200px;
+            z-index: 2;
+            box-shadow: white 0px 0px 100px;
+        }
+        .pic .rou21{
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            top: 330px;
+            left: 350px;
+            z-index: 2;
+            box-shadow: black 0px 0px 100px;
+        }
+        .pic .rou22{
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            top: 230px;
+            left: 170px;
+            z-index: 2;
+            box-shadow: white 0px 0px 200px;
+        }
+        .pic .rou31{
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            top: 60px;
+            left: 290px;
+            z-index: 3;
+            box-shadow: black 0px 0px 100px;
+        }
+        .pic .rou32{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            top: 500px;
+            left: 250px;
+            z-index: 3;
+            box-shadow: white 0px 0px 200px;
+        }
+        .pic .rou41{
+            width: 70px;
+            height: 70px;
+            transform: rotateX(50deg) rotateY(-32deg);
+            top: -150px;
+            left: 0px;
+            z-index: 4;
+            box-shadow: black 0px 0px 50px;
+        }
+        .pic .rou42{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            top: 720px;
+            left: 500px;
+            z-index: 4;
+            box-shadow: white 0px 0px 100px;
+        }
+        .pic .rou51{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            top: 320px;
+            left: 30px;
+            z-index: 5;
+            box-shadow: white 0px 0px 100px;
+        }
+        .pic .rou52{
+            transform: rotateX(50deg) rotateY(-32deg) translateZ(20px);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            top: 17px;
+            left: 350px;
+            z-index: 5;
+            box-shadow: black 0px 0px 100px;
+        }
+
+        .group{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .one{
+
+            animation: cir_run_one 10s linear 0s infinite;
+            z-index: 1;
+
+        }
+        .two{
+            /*transform: rotateY(36deg);*/
+            animation: cir_run_two 8s linear 0s infinite;
+            z-index: 2;
+        }
+        .three{
+            animation: cir_run_three 6s linear 0s infinite;
+            z-index: 3;
+        }
+        .four{
+            animation: cir_run_four 4s linear 0s infinite;
+            z-index: 4;
+        }
+        .five{
+            animation: cir_run_five 8s ease-in-out 0s infinite;
+            z-index: 5;
+        }
+        .box{
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="circle c1">
+        <div class="cube">
+            <div class="group group_one">
+                <div class="side one">
+                    1
+                </div>
+                <div class="pic pic1">
+                    <div class="round rou11"></div>
+                    <div class="round rou12"></div>
+                </div>
+            </div>
+            <div class="group group_two">
+                <div class="side two">
+                    2
+                    <!--<img src="ttround.png"/>-->
+                </div>
+                <!--<div class="pic pic2">-->
+                <!--<div class="round rou21"></div>-->
+                <!--<div class="round rou22"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="group group_three">
+                <div class="side three">
+                    3
+                </div>
+                <!--<div class="pic pic3">-->
+                <!--<div class="round rou31"></div>-->
+                <!--<div class="round rou32"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="group group_four">
+                <div class="side four">
+                    4
+                    <!--<img src="ttround.png"/>-->
+                </div>
+                <!--<div class="pic pic4">-->
+                <!--<div class="round rou41"></div>-->
+                <!--<div class="round rou42"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="group group_five">
+                <div class="side five">
+                    5
+                </div>
+                <!--<div class="pic pic5">-->
+                <!--<div class="round rou51"></div>-->
+                <!--<div class="round rou52"></div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.Mainpage{
+
+    height: 768px;
+    width: 1200px;
+    background-image: url("./background.png");
+}
+.hi-icon{
+    position: relative;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    /*border:solid white;*/
+    background-image: url('41.png');
+    background-color: rgba(255,255,255,0.1);
+
+    background-size: cover;
+
+    transition: background 0.2s, color 0.2s;
+}
+.hi-icon:after{
+    content: '';
+    top: -5px;
+    left: -5px;
+    /*padding: 5px;*/
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff;
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+.hi-icon:hover{
+    background-image: url("42.png");
+    background-color: rgba(255,255,255,0);
+
+
+
+
+
+
+}
+.hi-icon:hover:after{
+
+    content: '';
+    transform: scale(1);
+
+    opacity: 1;
+
+}
+.text{
+    width: 80px;
+    font-size: 15px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: white;
+    text-align: center;
+
+}
