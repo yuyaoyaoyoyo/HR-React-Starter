@@ -6,7 +6,7 @@
     /*flex: 1;*/
     display: flex;
     flex-direction: column;
-    background-image: url("background_pic/1.jpg");
+    background-image: url("background_pic/2.jpg");
     background-size: 100% 100%;
 }
 .Earth_logo {
@@ -20,6 +20,15 @@
     width: auto;
     height: 100%;
 }
+.text_picture{
+    height: 85px;
+    width: 400px;
+    background-size: contain;
+    top: 260px;
+    position: absolute;
+    left:800px;
+    background-image: url("jishuqinwuxitong.png");
+}
 .box {
     transform: scale(0.8);
 }
@@ -32,14 +41,25 @@
 .Button_container_row1, .Button_container_row2 {
     width: 100%;
     height: 50%;
-    padding: 0 150px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+}
+.Button_container_scroll{
+    width: 170%;
+    height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow-y: visible;
+    padding: 30px 120px 0px 50px;
 }
 .Button {
     width: 80px;
     height: 130px;
+    overflow-y: visible;
+
 }
 .hi-icon1{
     position: relative;
@@ -51,6 +71,8 @@
     background-color: rgba(255,255,255,0.1);
     background-size: cover;
     transition: background 0.2s, color 0.2s;
+    overflow-y: visible;
+
 }
 .hi-icon1:after{
     content: '';
@@ -65,21 +87,28 @@
     transition: transform 0.2s, opacity 0.2s;
     transform: scale(.8);
     opacity: 0;
+    overflow-y: visible;
+
 }
 .hi-icon1:hover{
     background-image: url("1_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
+    overflow-y: visible;
+
 }
 .hi-icon1:hover:after{
     content: '';
     transform: scale(1);
     opacity: 1;
+    overflow-y: visible;
+
 }
 
 .text{
     width: 80px;
     font-size: 15px;
-    line-height: 50px;
+    line-height: 70px;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -115,6 +144,8 @@
 .hi-icon2:hover{
     background-image: url("2_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
+
 }
 .hi-icon2:hover:after{
     content: '';
@@ -149,6 +180,7 @@
 .hi-icon3:hover{
     background-image: url("3_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon3:hover:after{
     content: '';
@@ -183,6 +215,7 @@
 .hi-icon4:hover{
     background-image: url("4_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon4:hover:after{
     content: '';
@@ -217,6 +250,7 @@
 .hi-icon5:hover{
     background-image: url("5_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon5:hover:after{
     content: '';
@@ -251,6 +285,7 @@
 .hi-icon6:hover{
     background-image: url("6_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon6:hover:after{
     content: '';
@@ -285,6 +320,7 @@
 .hi-icon7:hover{
     background-image: url("7_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon7:hover:after{
     content: '';
@@ -319,6 +355,7 @@
 .hi-icon8:hover{
     background-image: url("8_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon8:hover:after{
     content: '';
@@ -353,6 +390,7 @@
 .hi-icon9:hover{
     background-image: url("9_2.png");
     background-color: rgba(255,255,255,0);
+    transform: scale(1.3);
 }
 .hi-icon9:hover:after{
     content: '';
